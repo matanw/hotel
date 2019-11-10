@@ -2,10 +2,10 @@
 #include "stat.h"
 #include "user.h"
 
-int i1;
-int i2;
-int* p1;
-int *p2;
+long int i1;
+long int i2;
+long int* p1;
+long int *p2;
 
 extern void thread_switch(void);
 
