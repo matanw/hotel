@@ -3,9 +3,9 @@
 #include "types.h"
 #include "stat.h"
 #include "user.h"
+/*
 
-
-/* Possible states of a thread; */
+/* Possible states of a thread; *
 #define FREE        0x0
 #define RUNNING     0x1
 #define RUNNABLE    0x2
@@ -17,18 +17,15 @@ typedef struct thread thread_t, *thread_p;
 typedef struct mutex mutex_t, *mutex_p;
 
 struct thread {
-  int        sp;                /* curent stack pointer */
-  char stack[STACK_SIZE];       /* the thread's stack */
-  int        state;             /* running, runnable, waiting */
+  int        sp;                // curent stack pointer
+  char stack[STACK_SIZE];       //the thread's stack
+  int        state;             // running, runnable, waiting
 };
 static thread_t all_thread[MAX_THREAD];
 thread_p  current_thread;
 thread_p  next_thread;
 extern void thread_switch(void);
-/*
- *
- *
- */
+
 void 
 thread_init(void)
 {
@@ -41,7 +38,7 @@ thread_schedule(void)
 {
   thread_p t;
 
-  /* Find another runnable thread. */
+  // Find another runnable thread.
   for (t = all_thread; t < all_thread + MAX_THREAD; t++) {
     if (t->state == RUNNABLE && t != current_thread) {
       next_thread = t;
@@ -50,7 +47,7 @@ thread_schedule(void)
   }
 
   if (t >= all_thread + MAX_THREAD && current_thread->state == RUNNABLE) {
-    /* The current thread is the only runnable thread; run it. */
+    // The current thread is the only runnable thread; run it.
     next_thread = current_thread;
   }
 
@@ -59,7 +56,7 @@ thread_schedule(void)
     exit();
   }
 
-  if (current_thread != next_thread) {         /* switch threads?  */
+  if (current_thread != next_thread) {         // switch threads?
     next_thread->state = RUNNING;
     //thread_switch();//updaye current pointer, update status of currect to be runnable
   } else
@@ -107,7 +104,7 @@ int
 main(int argc, char *argv[]) 
 {
 
-    printf(1,"matan1\n");
+   // printf(1,"matan1\n");
 /*
    // const char* s = getenv("MYSET");
    // printf(1,"MYSET :%s\n",(s!=NULL)? s : "getenv returned NULL");
