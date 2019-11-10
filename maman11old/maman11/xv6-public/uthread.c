@@ -2,6 +2,9 @@
 #include "stat.h"
 #include "user.h"
 
+
+#include <stdlib.h>
+
 /* Possible states of a thread; */
 #define FREE        0x0
 #define RUNNING     0x1
@@ -22,7 +25,10 @@ static thread_t all_thread[MAX_THREAD];
 thread_p  current_thread;
 thread_p  next_thread;
 extern void thread_switch(void);
-
+/*
+ *
+ *
+ */
 void 
 thread_init(void)
 {
@@ -100,7 +106,11 @@ mythread(void)
 int 
 main(int argc, char *argv[]) 
 {
+
     printf(1,"matan1\n");
+
+    const char* s = getenv("MYSET");
+    printf("MYSET :%s\n",(s!=NULL)? s : "getenv returned NULL");
     thread_init();
     printf(1,"a2\n");
     thread_create(mythread);
@@ -108,7 +118,7 @@ main(int argc, char *argv[])
     thread_create(mythread);
 
     printf(1,"a4\n");
-    thread_schedule();
+    //thread_schedule();
 
     printf(1,"a5\n");
     return 0;
