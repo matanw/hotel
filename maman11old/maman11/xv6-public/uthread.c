@@ -55,7 +55,7 @@ thread_schedule(void)
 
   if (current_thread != next_thread) {         /* switch threads?  */
     next_thread->state = RUNNING;
-    thread_switch();
+    thread_switch();//updaye current pointer, update status of currect to be runnable
   } else
     next_thread = 0;
 }
@@ -100,6 +100,7 @@ mythread(void)
 int 
 main(int argc, char *argv[]) 
 {
+    printf("matan1\n");
   thread_init();
   thread_create(mythread);
   thread_create(mythread);
