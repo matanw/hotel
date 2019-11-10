@@ -5,7 +5,7 @@
 #include "user.h"
 /*
 
-/* Possible states of a thread; *
+// Possible states of a thread;
 #define FREE        0x0
 #define RUNNING     0x1
 #define RUNNABLE    0x2
@@ -84,7 +84,7 @@ thread_yield(void)
   current_thread->state = RUNNABLE;
   thread_schedule();
 }
-/*
+
 static void 
 mythread(void)
 {
