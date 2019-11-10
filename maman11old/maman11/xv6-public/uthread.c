@@ -101,9 +101,15 @@ int
 main(int argc, char *argv[]) 
 {
     printf(1,"matan1\n");
-  thread_init();
-  thread_create(mythread);
-  thread_create(mythread);
-  thread_schedule();
-  return 0;
+    thread_init();
+    printf(1,"a2\n");
+    thread_create(mythread);
+    printf(1,"a3\n");
+    thread_create(mythread);
+
+    printf(1,"a4\n");
+    thread_schedule();
+
+    printf(1,"a5\n");
+    return 0;
 }
