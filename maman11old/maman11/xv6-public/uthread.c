@@ -110,7 +110,7 @@ main(int argc, char *argv[])
     printf(1,"matan1\n");
 
     const char* s = getenv("MYSET");
-    printf("MYSET :%s\n",(s!=NULL)? s : "getenv returned NULL");
+    printf(1,"MYSET :%s\n",(s!=NULL)? s : "getenv returned NULL");
     thread_init();
     printf(1,"a2\n");
     thread_create(mythread);
