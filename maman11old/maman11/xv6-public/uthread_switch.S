@@ -10,6 +10,6 @@ thread_switch:
 
         //  *p2=*p1
    movl p2, %eax // ax=p2
-   movl  5, (%eax) //*ax=i1 -> *p2=i1 -> i2=i1
+   //movl  5, (%eax) //*ax=i1 -> *p2=i1 -> i2=i1
 	ret				/* pop return address from stack */
 
