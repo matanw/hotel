@@ -100,7 +100,7 @@ mythread(void)
 int 
 main(int argc, char *argv[]) 
 {
-    printf("matan1\n");
+    printf(1,"matan1\n");
   thread_init();
   thread_create(mythread);
   thread_create(mythread);
