@@ -55,7 +55,7 @@ thread_schedule(void)
 
   if (current_thread != next_thread) {         /* switch threads?  */
     next_thread->state = RUNNING;
-    thread_switch();//updaye current pointer, update status of currect to be runnable
+    //thread_switch();//updaye current pointer, update status of currect to be runnable
   } else
     next_thread = 0;
 }
