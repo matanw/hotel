@@ -87,7 +87,7 @@ thread_yield(void)
   current_thread->state = RUNNABLE;
   thread_schedule();
 }
-
+/*
 static void 
 mythread(void)
 {
@@ -102,7 +102,7 @@ mythread(void)
   thread_schedule();
 }
 
-
+*/
 int 
 main(int argc, char *argv[]) 
 {
