@@ -12,13 +12,30 @@ long int* ebp_point;
 
 extern void thread_switch(void);
 
-int 
+void print_esp_ebp(){
+
+    thread_switch();
+    printf(1, "ebp:%d , esp:%d - Hex: ebp:%x , esp:%x ",ebp_var,esp_var,ebp_var,esp_var);
+}
+int sum(int n){// return sum of 1-> n
+
+    printf(1,"call sum, with n= %d\n", n);
+    print_esp_ebp();
+    if (n==0){
+        return 0;
+    }
+    return n+sum(n-1);
+
+}
+int
 main(int argc, char *argv[]) 
 {
 
     esp_point=&esp_var;
     ebp_point= &ebp_var;
-    thread_switch();
-    printf(1, "epp:%d , esp:%d\n",ebp_var,esp_var);
+    print_esp_ebp();
+    int s=sum(5);
+
+    printf(1,"sum is %d\n", s);
     return 0;
 }
