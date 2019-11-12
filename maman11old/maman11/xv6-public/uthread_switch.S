@@ -6,13 +6,12 @@
  */
 	.globl thread_switch
 thread_switch:
-        /* Fill the missing part */
+// *current_thread=esp
+// movl current_thread, %eax
+ //movl %esp, (%eax)
 
-        //  *p2=*p1
-   movl esp_point, %eax // ax=esp_point
-   movl  %esp, (%eax) //*ax=esp
-   movl ebp_point, %eax // ax=ebp_point
-   movl  %ebp, (%eax) //*ax=ebp
-
+movl my_thread_p, %eax
+movl (%eax),%esp
+// esp =*my_thread_p
 	ret				/* pop return address from stack */
 
