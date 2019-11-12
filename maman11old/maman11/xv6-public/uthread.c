@@ -48,7 +48,7 @@ afunc(void) {
 int sum(int n){// return sum of 1-> n
 
     printf(1,"call sum, with n= %d\n", n);
-    print_esp_ebp();
+    //print_esp_ebp();
     if (n==0){
         return 0;
     }
