@@ -11,6 +11,8 @@ thread_switch:
         //  *p2=*p1
    movl esp_point, %eax // ax=esp_point
    movl  %esp, (%eax) //*ax=esp
+   movl ebp_point, %eax // ax=ebp_point
+   movl  %ebp, (%eax) //*ax=ebp
 
 	ret				/* pop return address from stack */
 
