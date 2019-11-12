@@ -2,20 +2,23 @@
 #include "stat.h"
 #include "user.h"
 
-long int i1;
-long int i2;
-long int* p1;
-long int *p2;
+long int esp_var;
+long int bsp_var;
+long int* esp_point;
+long int* bsp_point;
+
+
+
 
 extern void thread_switch(void);
 
 int 
 main(int argc, char *argv[]) 
 {
-    i1=11;
-    p1=&i1;
-    p2= &i2;
+
+    esp_point=&esp_var;
+    bsp_point= &bsp_var;
     thread_switch();
-    printf(1, "i2:%d\n",i2);
+    printf(1, "bsp:%d , esp:%d\n",bsp_var,esp_var);
     return 0;
 }

@@ -9,9 +9,8 @@ thread_switch:
         /* Fill the missing part */
 
         //  *p2=*p1
-   movl p2, %eax // ax=p2
-   movl  5, (%eax) //*ax=i1 -> *p2=i1 -> i2=i1
-   
- //   movl %esp, (%eax)
+   movl esp_point, %eax // ax=esp_point
+   movl  %esp, (%eax) //*ax=esp
+
 	ret				/* pop return address from stack */
 
