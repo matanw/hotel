@@ -17,12 +17,12 @@ thread_p  my_thread_p;
 
 extern void thread_switch(void);
 
-void printNotZeros(int id){
+void printNotZeros(char id){
     int s=0;
     for(int i=0;i<STACK_SIZE;i++)
         if (my_thread.stack[i]!=0)
             s++;
-    printf(1,"nonzero is %d  (id is %d)\n", s,id);
+    printf(1,"nonzero is %d  (id is %c)\n", s,id);
 }
 
 void
@@ -35,12 +35,12 @@ thread_create(void (*func)())
     t->sp -= 32;
 
 }
-
+//0,1,5,42,5,42,5,42,5,42
 
 static void
 afunc(void) {
     printf(1, "my thread running\n");
-    printNotZeros(2);
+    printNotZeros('c');
 }
 
 
@@ -60,9 +60,9 @@ main(int argc, char *argv[])
     my_thread_p=&my_thread;
     for(int i=0;i<STACK_SIZE;i++)
         my_thread.stack[i]=0;
-    printNotZeros(0);
+    printNotZeros('a');
     thread_create(afunc);
-    printNotZeros(1);
+    printNotZeros('b');
     thread_switch();
     printf(1, "you dont want see me\n");
     return 0;
