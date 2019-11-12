@@ -39,7 +39,6 @@ thread_create(void (*func)())
 
 static void
 afunc(void) {
-    int i;
     printf(1, "my thread running\n");
     printNotZeros();
 }
