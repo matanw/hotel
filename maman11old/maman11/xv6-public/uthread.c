@@ -6,7 +6,7 @@ long int esp_var;
 long int ebp_var;
 long int* esp_point;
 long int* ebp_point;
-#definde PRINT_REGISTERS  thread_switch(); \
+#definde PRINT_REGISTERS() thread_switch(); \
    printf(1, "ebp:%d , esp:%d - Hex: ebp:%x , esp:%x\n ",ebp_var,esp_var,ebp_var,esp_var);
 
 
@@ -47,7 +47,7 @@ main(int argc, char *argv[])
 
     esp_point=&esp_var;
     ebp_point= &ebp_var;
-    PRINT_REGISTERS
+    PRINT_REGISTERS()
     int s=sum(5);
 
     printf(1,"sum is %d\n", s);
