@@ -28,19 +28,19 @@ int sum(int n){// return sum of 1-> n
 
 }
 
-int f1(){
+void f1(){
     printf(1,"f1 call");
     print_esp_ebp();
     f2();
 
 }
-int f2(){
+void f2(){
     printf(1,"f2 call");
     print_esp_ebp();
     f3();
 
 }
-int f3(){
+void f3(){
     printf(1,"f3 call");
     print_esp_ebp();
 }
