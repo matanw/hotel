@@ -28,21 +28,22 @@ int sum(int n){// return sum of 1-> n
 
 }
 
-void f1(){
-    printf(1,"f1 call");
+void f3(){
+    printf(1,"f3 call");
     print_esp_ebp();
-    f2();
-
 }
+
 void f2(){
     printf(1,"f2 call");
     print_esp_ebp();
     f3();
 
 }
-void f3(){
-    printf(1,"f3 call");
+void f1(){
+    printf(1,"f1 call");
     print_esp_ebp();
+    f2();
+
 }
 int
 main(int argc, char *argv[]) 
