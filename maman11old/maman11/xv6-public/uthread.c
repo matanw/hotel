@@ -6,8 +6,7 @@ long int esp_var;
 long int ebp_var;
 long int* esp_point;
 long int* ebp_point;
-#definde PRINT_REGISTERS() thread_switch(); \
-   printf(1, "ebp:%d , esp:%d - Hex: ebp:%x , esp:%x\n ",ebp_var,esp_var,ebp_var,esp_var);
+#definde PRINT_REGISTERS() thread_switch();printf(1, "ebp:%d , esp:%d - Hex: ebp:%x , esp:%x\n ",ebp_var,esp_var,ebp_var,esp_var);
 
 
 
