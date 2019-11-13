@@ -15,7 +15,7 @@ extern void thread_switch(void);
 void print_esp_ebp(){
 
     thread_switch();
-    printf(1, "ebp:%d , esp:%d - Hex: ebp:%x , esp:%x ",ebp_var,esp_var,ebp_var,esp_var);
+    printf(1, "ebp:%d , esp:%d - Hex: ebp:%x , esp:%x\n ",ebp_var,esp_var,ebp_var,esp_var);
 }
 int sum(int n){// return sum of 1-> n
 
@@ -27,6 +27,23 @@ int sum(int n){// return sum of 1-> n
     return n+sum(n-1);
 
 }
+
+int f1(){
+    printf(1,"f1 call");
+    print_esp_ebp();
+    f2();
+
+}
+int f2(){
+    printf(1,"f2 call");
+    print_esp_ebp();
+    f3();
+
+}
+int f3(){
+    printf(1,"f3 call");
+    print_esp_ebp();
+}
 int
 main(int argc, char *argv[]) 
 {
@@ -37,5 +54,8 @@ main(int argc, char *argv[])
     int s=sum(5);
 
     printf(1,"sum is %d\n", s);
+    f1();
     return 0;
 }
+
+
