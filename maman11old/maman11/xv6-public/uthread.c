@@ -56,6 +56,7 @@ thread_schedule(void)
   if (current_thread != next_thread) {         /* switch threads?  */
     next_thread->state = RUNNING;
     thread_switch();
+	current_thread=next_thread;//todo: delete
   } else
     next_thread = 0;
 }
