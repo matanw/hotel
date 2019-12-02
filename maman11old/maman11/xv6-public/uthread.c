@@ -114,7 +114,7 @@ main(int argc, char *argv[])
 	if(1==0){
 		print_games();
 	}
-  if(1==1){
+  if(1==0){
 	  	printf(1, "start\n");
 		thread_init();
 		thread_create(mythread);
