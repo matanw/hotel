@@ -55,7 +55,9 @@ thread_schedule(void)
 
   if (current_thread != next_thread) {         /* switch threads?  */
     next_thread->state = RUNNING;
-    thread_switch();
+    if (1==0){
+		thread_switch();
+	}
 	current_thread=next_thread;//todo: delete
   } else
     next_thread = 0;
@@ -80,7 +82,8 @@ void
 thread_yield(void)
 {
   current_thread->state = RUNNABLE;
-  thread_schedule();
+  
+	  thread_schedule();
 }
 
 static void 
@@ -108,11 +111,17 @@ void print_games(){
 int 
 main(int argc, char *argv[]) 
 {
-	print_games();
-  if(1==0){thread_init();
-  thread_create(mythread);
-  thread_create(mythread);
-  thread_schedule();
+	if(1==0){
+		print_games();
+	}
+  if(1==1){
+	  	printf(1, "start\n");
+		thread_init();
+		thread_create(mythread);
+		thread_create(mythread);
+		thread_schedule();
+
+  printf(1, "end\n");
 	}
   return 0;
 }
