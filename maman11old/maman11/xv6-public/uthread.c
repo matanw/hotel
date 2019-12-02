@@ -97,7 +97,7 @@ mythread(void)
   thread_schedule();
 }
 
-int print_games(){
+void print_games(){
 	thread_p t;
 
     for (t = all_thread; t < all_thread + MAX_THREAD; t++) {
