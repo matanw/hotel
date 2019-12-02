@@ -55,7 +55,7 @@ thread_schedule(void)
 
   if (current_thread != next_thread) {         /* switch threads?  */
     next_thread->state = RUNNING;
-    if (1==0){
+    if (1==1){
 		thread_switch();
 	}
 	current_thread=next_thread;//todo: delete
@@ -114,7 +114,7 @@ main(int argc, char *argv[])
 	if(1==0){
 		print_games();
 	}
-  if(1==0){
+  if(1==1){
 	  	printf(1, "start\n");
 		thread_init();
 		thread_create(mythread);
