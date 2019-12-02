@@ -101,7 +101,7 @@ void print_games(){
 	thread_p t;
 
     for (t = all_thread; t < all_thread + MAX_THREAD; t++) {
-   	 		printf(1, "t: 0x%x decimal : d%\n", t,t);
+   	 		printf(1, "t: 0x%x decimal : %d\n", t,t);
     }
 	
 }
