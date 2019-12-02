@@ -109,9 +109,9 @@ int
 main(int argc, char *argv[]) 
 {
 	print_games();
-  thread_init();
+  /*thread_init();
   thread_create(mythread);
   thread_create(mythread);
-  thread_schedule();
+  thread_schedule();*/
   return 0;
 }
