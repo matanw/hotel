@@ -6,13 +6,5 @@
  */
 	.globl thread_switch
 thread_switch:
-// *current_thread=esp
-// movl current_thread, %eax
- //movl %esp, (%eax)
-
-movl my_thread_p, %eax
-movl (%eax),%esp
-popal
-// esp =*my_thread_p
 	ret				/* pop return address from stack */
 
