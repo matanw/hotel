@@ -18,8 +18,8 @@ movl (%eax), %esp
 popal
 /*in step 3 - update cur to be next*/
 movl next_state, %eax
-movl %eax, next_state
-movl $0, next_state
+movl %eax, current_state
+/*movl $0, next_state*/
         /* Fill the missing part */
 	ret				/* pop return address from stack */
 
