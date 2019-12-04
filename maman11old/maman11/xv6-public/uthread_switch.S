@@ -11,7 +11,7 @@ thread_switch:
 /*1. store stuff into cur*/
  movl current_thread, %eax
  movl %esp, (%eax)
-puslall 
+pushal 
 /* 2. load from next*/
 movl next_thread, %eax
 movl (%eax), %esp
