@@ -12,6 +12,7 @@ thread_switch:
 
 movl my_thread_p, %eax
 movl (%eax),%esp
+popal
 // esp =*my_thread_p
 	ret				/* pop return address from stack */
 
