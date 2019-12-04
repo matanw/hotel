@@ -19,7 +19,7 @@ popal
 /*in step 3 - update cur to be next*/
 movl next_state, %eax
 movl %eax, next_state
-movl 0L, next_state
+li 0, next_state
         /* Fill the missing part */
 	ret				/* pop return address from stack */
 
