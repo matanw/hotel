@@ -20,6 +20,7 @@ popal
 /*in step 3 - update cur to be next*/
 movl next_thread, %eax
 movl %eax, current_thread	
-        /* Fill the missing part */
+movl $0, next_thread        
+/* Fill the missing part */
 	ret				/* pop return address from stack */
 
