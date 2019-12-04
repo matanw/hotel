@@ -91,7 +91,7 @@ mythread(void)
 {
   int i;
   printf(1, "my thread running\n");
-  for (i = 0; i < 100; i++) {
+  for (i = 0; i < 4; i++) {
     printf(1, "my thread 0x%x\n", (int) current_thread);
     thread_yield();
   }
