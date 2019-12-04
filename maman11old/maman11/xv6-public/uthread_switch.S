@@ -9,9 +9,10 @@ thread_switch:
 
 /*current_thread ,next_thread*/
 /*1. store stuff into cur*/
- movl current_thread, %eax
- movl %esp, (%eax)
 pushal 
+movl current_thread, %eax
+ movl %esp, (%eax)
+ 
 /* 2. load from next*/
 movl next_thread, %eax
 movl (%eax), %esp
