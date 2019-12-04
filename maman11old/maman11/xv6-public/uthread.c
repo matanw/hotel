@@ -58,7 +58,7 @@ thread_schedule(void)
     if (1==1){
 		thread_switch();
 	}
-	current_thread=next_thread;//todo: delete
+//	current_thread=next_thread;//todo: delete
   } else
     next_thread = 0;
 }

@@ -17,7 +17,8 @@ movl next_thread, %eax
 movl (%eax), %esp
 popal
 /*in step 3 - update cur to be next*/
-
+movl next_state, current_state
+movl 0, next,state
         /* Fill the missing part */
 	ret				/* pop return address from stack */
 
