@@ -40,7 +40,8 @@ thread_create(void (*func)())
 static void
 afunc(void) {
     printf(1, "my thread running\n");
-   // printNotZeros('c');
+    printNotZeros('c');
+    exit();
 }
 
 
